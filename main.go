@@ -51,6 +51,7 @@ func compareValues(enemyHealth, userTotalAttack int) bool {
 	return pointDifference <= 10
 }
 
+
 func getUserAttack() int {
 	total := 0
 
@@ -66,13 +67,15 @@ func getUserAttack() int {
 		case "hard":
 			attackValue = getHardAttack()
 		default:
-			fmt.Println("Неизвестный тип атаки:", inputAttack)
+			fmt.Println("Неверный тип атаки. Попробуй снова.")
+			i-- // повторить попытку ввода
 			continue
 		}
 		fmt.Println("Количество очков твоей атаки:", attackValue)
-		total += 1
+		total += attackValue
 	}
 	return total
+}
 }
 
 func runGame() bool {
