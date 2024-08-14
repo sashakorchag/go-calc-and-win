@@ -52,27 +52,29 @@ func compareValues(enemyHealth, userTotalAttack int) bool {
 }
 
 
-func getUserAttack() int {
-	total := 0
+for i := 0; i < 5; i++ {
+    // сообщение в начале цикла
+    fmt.Println("начало i=", i, "total=", total)
+    inputAttack := input("Введи тип атаки: ")
 
-	for i := 0; i < 5; i++ {
-		inputAttack := input("Введи тип атаки: ")
-
-		var attackValue int
-		switch inputAttack {
-		case "lite":
-			attackValue = getLiteAttack()
-		case "mid":
-			attackValue = getMidAttack()
-		case "hard":
-			attackValue = getHardAttack()
-		default:
-			fmt.Println("Неверный тип атаки. Попробуй снова.")
-			i-- // повторить попытку ввода
-			continue
-		}
-		fmt.Println("Количество очков твоей атаки:", attackValue)
-		total += attackValue
+    var attackValue int
+    switch inputAttack {
+    case "lite":
+        attackValue = getLiteAttack()
+    case "mid":
+        attackValue = getMidAttack()
+    case "hard":
+        attackValue = getHardAttack()
+    default:
+        fmt.Println("Неверный тип атаки. Попробуй снова.")
+        i-- // повторить попытку ввода
+        continue
+    }
+    fmt.Println("Количество очков твоей атаки:", attackValue)
+    total += attackValue
+    // сообщение в конце цикла
+    fmt.Println("конец attackValue=", attackValue, "total=", total)
+}
 	}
 	return total
 }
