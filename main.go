@@ -51,7 +51,7 @@ func compareValues(enemyHealth, userTotalAttack int) bool {
 }
 
 
-ffor i := 0; i < 5; i++ {
+for i := 0; i < 5; i++ {
     // сообщение в начале цикла
     fmt.Println("начало i=", i, "total=", total)
     inputAttack := input("Введи тип атаки: ")
