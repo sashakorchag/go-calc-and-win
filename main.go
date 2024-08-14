@@ -78,8 +78,6 @@ for i := 0; i < 5; i++ {
 	}
 	return total
 }
-}
-
 func runGame() bool {
 	enemyHealth := setEnemyHealth()
 	userTotalAttack := getUserAttack()
