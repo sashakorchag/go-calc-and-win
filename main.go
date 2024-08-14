@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"strings"
 	"time"
 	
 )
@@ -52,7 +51,7 @@ func compareValues(enemyHealth, userTotalAttack int) bool {
 }
 
 
-for i := 0; i < 5; i++ {
+ffor i := 0; i < 5; i++ {
     // сообщение в начале цикла
     fmt.Println("начало i=", i, "total=", total)
     inputAttack := input("Введи тип атаки: ")
@@ -70,8 +69,8 @@ for i := 0; i < 5; i++ {
         i-- // повторить попытку ввода
         continue
     }
-    fmt.Println("Количество очков твоей атаки:", attackValue)
-    total += attackValue
+   fmt.Println("Количество очков твоей атаки:", attackValue)
+    total += 1
     // сообщение в конце цикла
     fmt.Println("конец attackValue=", attackValue, "total=", total)
 }
@@ -89,7 +88,7 @@ func runGame() bool {
 		fmt.Println("В этот раз не повезло :( Бой проигран.")
 	}
 	answer := input("Чтобы сыграть ещё раз, введи букву [y] или [Y]: ")
-return strings.ToUpper(answer) == "Y"
+return answer == "Y" || answer == "y" 
 }
 
 func main() {
