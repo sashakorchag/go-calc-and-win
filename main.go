@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 	"time"
+	
 )
 
 // rnd - генератор псевдослучайных чисел
@@ -84,7 +86,7 @@ func runGame() bool {
 		fmt.Println("В этот раз не повезло :( Бой проигран.")
 	}
 	answer := input("Чтобы сыграть ещё раз, введи букву [y] или [Y]: ")
-	return answer == "Y"
+return strings.ToUpper(answer) == "Y"
 }
 
 func main() {
